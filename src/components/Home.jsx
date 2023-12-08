@@ -1,10 +1,10 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Header from "./Header";
 import Catigory from "./Catigory";
 const Home = () => {
   return (
     <div>
-      <Navbar />
+      <Header />
       <Catigory />
     </div>
   );

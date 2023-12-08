@@ -1,9 +1,12 @@
-const Navbar = () => {
+const Header = () => {
   return (
-    <header>
-      <div id="logo-contacts">
-        <img id="logo" src={require("../images/logo.png")} alt="" />
-        <div id="follow-us">
+    <div id="header">
+      <img id="logo" src={require("../images/logo.png")} alt="" />
+      <div id="contact-search">
+        <div id="contact-follow">
+          <p>
+            Call us at<a href="tell:8130206964">8130206964</a>
+          </p>
           <p>Follow us on:</p>
           <a href="https://facebook.com">
             <img src={require("../images/Facebook_Logo_2023.png")} alt="" />
@@ -27,8 +30,8 @@ const Navbar = () => {
           </form>
         </div>
       </div>
-    </header>
+    </div>
   );
 };
 
-export default Navbar;
+export default Header;
