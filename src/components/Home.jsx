@@ -1,11 +1,11 @@
 import React from "react";
 import Header from "./Header";
-import Catigory from "./Catigory";
+import Category from "./Category";
 const Home = () => {
   return (
     <div>
       <Header />
-      <Catigory />
+      <Category />
     </div>
   );
 };

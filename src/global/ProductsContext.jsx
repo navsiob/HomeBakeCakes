@@ -19,6 +19,9 @@ export class ProductsContextProvider extends React.Component {
             ProductName: change.doc.data().ProductName,
             ProductPrice: change.doc.data().ProductPrice,
             ProductImg: change.doc.data().ProductImg,
+            ProductCategory: change.doc.data().ProductCategory,
+            productALT: change.doc.data().productALT,
+            productSize: change.doc.data().productSize,
           });
         }
         this.setState({

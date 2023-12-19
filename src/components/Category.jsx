@@ -1,4 +1,6 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
+
 const Catigory = () => {
   return (
     <main>
@@ -11,168 +13,169 @@ const Catigory = () => {
           connect you to a wide range of talented and innovative home bakers in
           your area who are willing to bake the freshest cakes for you. Now,
           with Martian Treats, you can also
-          <em>buy a customized cake online</em>. This way, you can celebrate all
-          the unique and joyous moments with your friends and family.
+          <em> buy a customized cake online</em>. This way, you can celebrate
+          all the unique and joyous moments with your friends and family.
         </p>
       </div>
       <div id="category">
         <h2>Choose Your Occasion</h2>
         <div id="Birthday-Cakes">
-          <a href="">
+          <Link to="Birthday">
             <img src={require("../images/birthday cake.jpeg")} alt="" />
             <h3>Birthday Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="Anniversary-Cakes">
-          <a href="">
+          <Link to="Anniversary">
             <img src={require("../images/anniversary cake.jpeg")} alt="" />
             <h3>Anniversary Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="Kids-Cakes">
-          <a href="">
+          <Link to="Kids">
             <img src={require("../images/kids cake.jpeg")} alt="" />
-            <h3>Kids-Cakes</h3>
-          </a>
+            <h3>Kids Cakes</h3>
+          </Link>
         </div>
         <div id="Baby-Shower-Cakes">
-          <a href="">
+          <Link to="Baby-Shower">
             <img src={require("../images/baby shower.jpeg")} alt="" />
             <h3>Baby Shower Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="Sugar-Free-Cakes">
-          <a href="">
+          <Link to="Sugar-Free">
             <img src={require("../images/sugar free cake.jpeg")} alt="" />
             <h3>Sugar Free Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="Cup-Cakes">
-          <a href="">
+          <Link to="Cup">
             <img src={require("../images/cup cake.jpeg")} alt="" />
             <h3>Cup Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="Engagement-Cakes">
-          <a href="">
+          <Link to="Engagement">
             <img src={require("../images/engagement cake.jpeg")} alt="" />
             <h3>Engagement Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="Heart-Shaped-Cakes">
-          <a href="">
+          <Link to="Heart-Shaped">
             <img src={require("../images/heart shaped cake.jpeg")} alt="" />
             <h3>Heart Shaped Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="Theme-Cakes">
-          <a href="">
+          <Link to="Theme">
             <img src={require("../images/theme cake.jpeg")} alt="" />
             <h3>Theme Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="6-Month-Birthday-Cakes">
-          <a href="">
+          <Link to="6-Months">
             <img src={require("../images/6 month.jpeg")} alt="" />
             <h3>Six Month Birthday Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="Valentines-Day-Cakes">
-          <a href="">
+          <Link to="Valentines">
             <img src={require("../images/valentine cake.jpg")} alt="" />
             <h3>Valentines Day Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="Wedding-Cakes">
-          <a href="">
+          <Link to="Wedding">
             <img src={require("../images/wedding Cake.jpg")} alt="" />
             <h3>Wedding Cakes</h3>
-          </a>
+          </Link>
         </div>
         <div id="custumized-chocolate">
-          <a href="">
+          <Link to="Chocolates">
             <img src={require("../images/customize chocolate.jpg")} alt="" />
-            <h3>Custumized Chocolate</h3>
-          </a>
+            <h3>Customized Chocolate</h3>
+          </Link>
         </div>
       </div>
       <div id="why-us">
         <p>Why Martian Treats?</p>
         <img src={require("../images/homemade.jpg")} alt="" />
-        <img src={require("../images/freash.jpg")} alt="" />
-        <img src={require("../images/Hygiene.jpg")} alt="" />
+        <img src={require("../images/fresh.jpeg")} alt="" />
+        <img src={require("../images/Hygiene.jpeg")} alt="" />
       </div>
       <div id="cake-size">
         <h2>Choose your size</h2>
         <ul>
           <li>
-            <a href="">250 gram cake</a>
+            <Link to="250g">250 gram cake</Link>
           </li>
           <li>
-            <a href="">500 gram cake</a>
+            <Link to="500g">500 gram cake</Link>
           </li>
           <li>
-            <a href="">1 kg cake</a>
+            <Link to="1kg">1 kg cake</Link>
           </li>
           <li>
-            <a href="">1.5 kg cake</a>
+            <Link to="1.5kg">1.5 kg cake</Link>
           </li>
           <li>
-            <a href="">2 kg cake</a>
+            <Link to="2kg">2 kg cake</Link>
           </li>
           <li>
-            <a href="">2.5 kg cake</a>
+            <Link to="2.5kg">2.5 kg cake</Link>
           </li>
           <li>
-            <a href="">3 kg cake</a>
+            <Link to="3kg">3 kg cake</Link>
           </li>
           <li>
-            <a href="">3.5 kg cake</a>
+            <Link to="3.5kg">3.5 kg cake</Link>
           </li>
           <li>
-            <a href="">4 kg cake</a>
+            <Link to="4kg">4 kg cake</Link>
           </li>
           <li>
-            <a href="">4.5 kg cake</a>
+            <Link to="4.5kg">4.5 kg cake</Link>
           </li>
           <li>
-            <a href="">5 kg cake</a>
+            <Link to="5kg">5 kg cake</Link>
           </li>
           <li>
-            <a href="">5.5 kg cake</a>
+            <Link to="5.5kg">5.5 kg cake</Link>
           </li>
           <li>
-            <a href="">6 kg cake</a>
+            <Link to="6kg">6 kg cake</Link>
           </li>
           <li>
-            <a href="">6.5 kg cake</a>
+            <Link to="6.5kg">6.5 kg cake</Link>
           </li>
           <li>
-            <a href="">7 kg cake</a>
+            <Link to="7kg">7 kg cake</Link>
           </li>
           <li>
-            <a href="">7.5 kg cake</a>
+            <Link to="7.5kg">7.5 kg cake</Link>
           </li>
           <li>
-            <a href="">8 kg cake</a>
+            <Link to="8kg">8 kg cake</Link>
           </li>
           <li>
-            <a href="">8.5 kg cake</a>
+            <Link to="8.5kg">8.5 kg cake</Link>
           </li>
           <li>
-            <a href="">9 kg cake</a>
+            <Link to="9kg">9 kg cake</Link>
           </li>
           <li>
-            <a href="">9.5 kg cake</a>
+            <Link to="9.5kg">9.5 kg cake</Link>
           </li>
           <li>
-            <a href="">10 kg cake</a>
+            <Link to="10kg">10 kg cake</Link>
           </li>
           <li>
-            <a href="">10.5 kg cake</a>
+            <Link to="10.5kg">10.5 kg cake</Link>
           </li>
         </ul>
       </div>
+      <Outlet />
     </main>
   );
 };

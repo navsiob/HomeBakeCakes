@@ -8,6 +8,59 @@ li {
   margin: 0;
   padding: 0;
 }
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+input[type="file"] {
+  margin-top: 5px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-nd {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.btn-nd:hover {
+  background-color: #0056b3;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -18,12 +71,10 @@ body {
 
 /* Header styles */
 #logo {
-  width: 90vw; /* Adjust the max-width as needed */
-  max-width: 300px;
+  max-width: 200px; /* Adjust the max-width as needed */
   height: auto;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px ; /* Center the logo */
+  display: block;
+  margin: 20px auto; /* Center the logo */
 }
 
 #contact-follow {
@@ -60,7 +111,7 @@ body {
 }
 
 #header-search {
-  width: 70%;
+  width: 90vw;
   padding: 8px;
   margin-top: 10px;
   border: 1px solid #ccc;
@@ -81,7 +132,6 @@ body {
   background-color: #333;
   color: #fff;
 }
-
 
 /* Main content styles */
 main {
@@ -105,9 +155,7 @@ main {
   margin-bottom: 40px;
   margin: 2px;
 }
-#category a {
-  text-decoration: none;
-  color: #333;
+#category link {
   text-align: center;
   display: block;
 }
@@ -117,6 +165,8 @@ main {
   height: auto;
 }
 #category h3 {
+  text-decoration: none;
+  color: #333;
   margin-top: 10px;
   font-size: 1.1em;
 }
