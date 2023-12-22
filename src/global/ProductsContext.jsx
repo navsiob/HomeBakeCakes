@@ -7,7 +7,6 @@ export class ProductsContextProvider extends React.Component {
   state = {
     products: [],
   };
-
   componentDidMount() {
     const prevProducts = this.state.products;
     db.collection("Products").onSnapshot((snapshot) => {
@@ -16,20 +15,21 @@ export class ProductsContextProvider extends React.Component {
         if (change.type === "added") {
           prevProducts.push({
             ProductID: change.doc.id,
+            ProductSize: change.doc.data().ProductSize,
             ProductName: change.doc.data().ProductName,
-            ProductPrice: change.doc.data().ProductPrice,
             ProductImg: change.doc.data().ProductImg,
             ProductCategory: change.doc.data().ProductCategory,
-            productALT: change.doc.data().productALT,
-            productSize: change.doc.data().productSize,
+            ProductALT: change.doc.data().ProductALT,
           });
         }
-        this.setState({
-          products: prevProducts,
-        });
+      });
+
+      this.setState({
+        products: prevProducts,
       });
     });
   }
+
   render() {
     return (
       <ProductsContext.Provider value={{ products: [...this.state.products] }}>

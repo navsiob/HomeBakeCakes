@@ -8,6 +8,7 @@ li {
   margin: 0;
   padding: 0;
 }
+/* add product */
 .container {
   max-width: 600px;
   margin: 0 auto;
@@ -20,14 +21,14 @@ li {
   margin-bottom: 15px;
 }
 
-label {
+.container label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-input[type="text"],
-input[type="number"],
+.container input[type="text"],
+.container input[type="number"],
 select {
   width: 100%;
   padding: 8px;
@@ -36,11 +37,11 @@ select {
   border: 1px solid #ccc;
 }
 
-input[type="file"] {
+.container input[type="file"] {
   margin-top: 5px;
 }
 
-.btn {
+.container .btn {
   display: inline-block;
   padding: 8px 20px;
   border: none;
@@ -53,12 +54,12 @@ input[type="file"] {
   text-decoration: none;
 }
 
-.btn-nd {
+.container .btn-nd {
   margin-top: 10px;
   margin-left: 5px;
 }
 
-.btn-nd:hover {
+.container .btn-nd:hover {
   background-color: #0056b3;
 }
 
@@ -226,4 +227,75 @@ main {
 #cake-size a:hover {
   background-color: #333;
   color: #fff;
+}
+
+/* categories component styles */
+.products-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.product-img img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+.whatsapp-query {
+  display: flex;
+  align-items: center;
+}
+
+.whatsapp-query a img {
+  max-width: 30px;
+  height: auto;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  margin-left: 5px;
+}
+
+.whatsapp-query a img:hover {
+  transform: scale(1.1);
+}
+
+.cake-size-input,
+.date-input,
+.location-input,
+.alternate-number-input {
+  width: calc(100% - 20px);
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.Whatsapp-btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.Whatsapp-btn:hover {
+  background-color: #0056b3;
 }

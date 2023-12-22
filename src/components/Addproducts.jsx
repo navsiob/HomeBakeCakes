@@ -3,7 +3,6 @@ import { storage, db } from "../config/Config";
 
 const Addproducts = () => {
   const [productName, setProductName] = useState("");
-  const [productPrice, setProductPrice] = useState(0);
   const [productImg, setProductImg] = useState(null);
   const [productCategory, setProductCategory] = useState("");
   const [productALT, setProductALT] = useState("");
@@ -26,8 +25,6 @@ const Addproducts = () => {
 
   const addProduct = (e) => {
     e.preventDefault();
-    // console.log(productName, productPrice, productImg);
-    // storing the image
     const uploadTask = storage
       .ref(`product-images/${productImg.name}`)
       .put(productImg);
@@ -53,7 +50,6 @@ const Addproducts = () => {
                 ProductName: productName,
                 ProductCategory: productCategory,
                 ProductALT: productALT,
-                ProductPrice: Number(productPrice),
                 ProductSize: productSize,
                 ProductImg: url,
               })
@@ -61,7 +57,6 @@ const Addproducts = () => {
                 setProductName("");
                 setProductCategory("");
                 setProductALT("");
-                setProductPrice(0);
                 setProductSize("");
                 setProductImg(null);
                 setError("");
@@ -130,15 +125,7 @@ const Addproducts = () => {
           onChange={(e) => setProductALT(e.target.value)}
           value={productALT}
         />
-        <label htmlFor="product-price">Product Price </label>
-        <input
-          id="product-price"
-          type="number"
-          className="form-control"
-          required
-          onChange={(e) => setProductPrice(e.target.value)}
-          value={productPrice}
-        />
+
         <label htmlFor="product-size">Product Size </label>
         <select
           id="product-Size"
