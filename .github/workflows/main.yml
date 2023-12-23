@@ -22,9 +22,12 @@ jobs:
       run: npm install
 
     - name: Build site
-      run: npm run build
+      run: npm start
 
     - name: Deploy to GitHub Pages
-      run: npx gh-pages -d dist
+      run: |
+        git config --global user.email "oberoinav1991@gmail.com"
+        git config --global user.name "navsiob"
+        npx gh-pages -d dist
       env:
          GH_TOKEN: ${{ secrets.homebakecakes}}
