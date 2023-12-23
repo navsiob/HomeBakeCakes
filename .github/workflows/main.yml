@@ -1,33 +1,29 @@
-name: Deploy to GitHub Pages
-
+name: Publish to GitHub Pages
 on:
   push:
     branches:
-      - main
-
+      - main # Set a branch name to trigger the workflow on pushes to this branch
 jobs:
-  deploy:
+  github-pages:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
         with:
-          node-version: 20
-
-      - name: Install dependencies
+          fetch-depth: 0 # Shallow clones should be disabled for a better relevancy
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: '20' # Use a stable version of Node.js
+      - name: Install Dependencies
         run: npm install
-
-      - name: Build site
+      - name: Build Site
         run: npm run build
-
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          path: .
       - name: Deploy to GitHub Pages
-        env:
-          GH_TOKEN: ${{ secrets.homebakecakes }}
-        run: |
-          git config --global user.email "oberoinav1991@gmail.com"
-          git config --global user.name "navsiob"
-          npx gh-pages -d build
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.homebakecakes}}
+          publish_dir: ./build # Specify the output directory of your built site
