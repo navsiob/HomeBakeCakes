@@ -30,4 +30,4 @@ jobs:
         git config --global user.name "navsiob"
         npx gh-pages -d dist
       env:
-        GH_TOKEN: ${{ secrets.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}
+        GH_TOKEN: ${{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}
