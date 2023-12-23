@@ -1,10 +1,10 @@
 name: Publish to GitHub Pages
 on:
-  push:
+ push:
     branches:
       - main # Set a branch name to trigger the workflow on pushes to this branch
 jobs:
-  github-pages:
+ github-pages:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -27,3 +27,4 @@ jobs:
         with:
           github_token: ${{ secrets.homebakecakes}}
           publish_dir: ./build # Specify the output directory of your built site
+          permissions: read-all # This allows the token to read from all repositories
