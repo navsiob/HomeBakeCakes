@@ -25,6 +25,5 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.homebakecakes}}
+          github_token: ${{ secrets.GH_PAGES_TOKEN }}
           publish_dir: ./build # Specify the output directory of your built site
-          permissions: read-all # This allows the token to read from all repositories
