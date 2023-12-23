@@ -26,8 +26,9 @@ jobs:
 
     - name: Deploy to GitHub Pages
       run: |
-        git config --global user.email "oberoinav1991@gmail.com"
         git config --global user.name "navsiob"
+        git config --global user.email "oberoinav1991@gmail.com"
+
         npx gh-pages -d build
       env:
          GH_TOKEN: ${secrets.homebakecakes}
