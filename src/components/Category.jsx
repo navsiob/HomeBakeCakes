@@ -7,14 +7,13 @@ const Catigory = () => {
       <div id="introduction">
         <h1>Online Cake Delivery In Delhi</h1>
         <p>
-          We are an <strong>online cake delivery</strong> portal called Martial
-          Treats; we provide our <strong>online cake delivery</strong> services
-          across <strong>Delhi</strong>. When you do place an order with us, we
-          connect you to a wide range of talented and innovative home bakers in
-          your area who are willing to bake the freshest cakes for you. Now,
-          with Martian Treats, you can also
-          <em> buy a customized cake online</em>. This way, you can celebrate
-          all the unique and joyous moments with your friends and family.
+          Home Bake Cakes is all about those delicious
+          <strong> home-made cakes</strong>, made with lots of love! When you
+          order from us, we hook you up with fantastic <em>local bakers</em> who
+          bake the yummiest and <strong> freshest cakes</strong>. And the best
+          part is you can now grab a <strong>custom-made cake</strong> online!
+          Celebrate your special moments with friends and family, all while we
+          make sure everything is super <strong>clean and hygienic</strong>!
         </p>
       </div>
       <div id="category">

@@ -21,25 +21,25 @@ import CustomizedChocolate from "./components/cake-category/CustomizedChocolate"
 import Size250g from "./components/cake-sizes/Size250g";
 import Size500g from "./components/cake-sizes/Size500g";
 import Size1kg from "./components/cake-sizes/Size1kg";
-import Size1_5kg from "./components/cake-sizes/Size1_5kg";
+import Size15kg from "./components/cake-sizes/Size1_5kg";
 import Size2kg from "./components/cake-sizes/Size2kg";
-import Size2_5kg from "./components/cake-sizes/Size2_5kg";
+import Size25kg from "./components/cake-sizes/Size2_5kg";
 import Size3kg from "./components/cake-sizes/Size3kg";
-import Size3_5kg from "./components/cake-sizes/Size3_5kg";
+import Size35kg from "./components/cake-sizes/Size3_5kg";
 import Size4kg from "./components/cake-sizes/Size4kg";
-import Size4_5kg from "./components/cake-sizes/Size4_5kg";
+import Size45kg from "./components/cake-sizes/Size4_5kg";
 import Size5kg from "./components/cake-sizes/Size5kg";
-import Size5_5kg from "./components/cake-sizes/Size5_5kg";
+import Size55kg from "./components/cake-sizes/Size5_5kg";
 import Size6kg from "./components/cake-sizes/Size6kg";
-import Size6_5kg from "./components/cake-sizes/Size6_5kg";
+import Size65kg from "./components/cake-sizes/Size6_5kg";
 import Size7kg from "./components/cake-sizes/Size7kg";
-import Size7_5kg from "./components/cake-sizes/Size7_5kg";
+import Size75kg from "./components/cake-sizes/Size7_5kg";
 import Size8kg from "./components/cake-sizes/Size8kg";
-import Size8_5kg from "./components/cake-sizes/Size8_5kg";
+import Size85kg from "./components/cake-sizes/Size8_5kg";
 import Size9kg from "./components/cake-sizes/Size9kg";
-import Size9_5kg from "./components/cake-sizes/Size9_5kg";
+import Size95kg from "./components/cake-sizes/Size9_5kg";
 import Size10kg from "./components/cake-sizes/Size10kg";
-import Size10_5kg from "./components/cake-sizes/Size10_5kg";
+import Size105kg from "./components/cake-sizes/Size10_5kg";
 
 const App = () => {
   return (
@@ -64,25 +64,25 @@ const App = () => {
           <Route path="250g" element={<Size250g />} />
           <Route path="500g" element={<Size500g />} />
           <Route path="1kg" element={<Size1kg />} />
-          <Route path="1.5kg" element={<Size1_5kg />} />
+          <Route path="1.5kg" element={<Size15kg />} />
           <Route path="2kg" element={<Size2kg />} />
-          <Route path="2.5kg" element={<Size2_5kg />} />
+          <Route path="2.5kg" element={<Size25kg />} />
           <Route path="3kg" element={<Size3kg />} />
-          <Route path="3.5kg" element={<Size3_5kg />} />
+          <Route path="3.5kg" element={<Size35kg />} />
           <Route path="4kg" element={<Size4kg />} />
-          <Route path="4.5kg" element={<Size4_5kg />} />
+          <Route path="4.5kg" element={<Size45kg />} />
           <Route path="5kg" element={<Size5kg />} />
-          <Route path="5.5kg" element={<Size5_5kg />} />
+          <Route path="5.5kg" element={<Size55kg />} />
           <Route path="6kg" element={<Size6kg />} />
-          <Route path="6.5kg" element={<Size6_5kg />} />
+          <Route path="6.5kg" element={<Size65kg />} />
           <Route path="7kg" element={<Size7kg />} />
-          <Route path="7.5kg" element={<Size7_5kg />} />
+          <Route path="7.5kg" element={<Size75kg />} />
           <Route path="8kg" element={<Size8kg />} />
-          <Route path="8.5kg" element={<Size8_5kg />} />
+          <Route path="8.5kg" element={<Size85kg />} />
           <Route path="9kg" element={<Size9kg />} />
-          <Route path="9.5kg" element={<Size9_5kg />} />
+          <Route path="9.5kg" element={<Size95kg />} />
           <Route path="10kg" element={<Size10kg />} />
-          <Route path="10.5kg" element={<Size10_5kg />} />
+          <Route path="10.5kg" element={<Size105kg />} />
         </Routes>
       </BrowserRouter>
     </ProductsContextProvider>
