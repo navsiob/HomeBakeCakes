@@ -1,0 +1,120 @@
+import React, { useContext, useState, useEffect } from "react";
+import { ProductsContext } from "../global/ProductsContext";
+
+const ProductDetails = ({ category }) => {
+  const { products } = useContext(ProductsContext);
+  const [selectedSize, setSelectedSize] = useState("");
+  const [selectedDate, setSelectedDate] = useState("");
+  const [location, setLocation] = useState("");
+  const [alternateNumber, setAlternateNumber] = useState("");
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  useEffect(() => {
+    const results = products.filter((product) => {
+      return (
+        product.ProductName.toLowerCase().includes(category.toLowerCase()) ||
+        product.ProductCategory.includes(category) ||
+        product.ProductSize.includes(category)
+      );
+    });
+    setFilteredProducts(results);
+  }, [category, products]);
+
+  const createWhatsappMessage = (productName, productImg) => {
+    const message = `I want to purchase ${productName} at size ${selectedSize} for ${selectedDate} my location at ${location} and my Alternate Number is ${alternateNumber}`;
+
+    return `https://api.whatsapp.com/send?phone=919205525290&text=${encodeURIComponent(
+      message
+    )}%0A${encodeURIComponent(productImg)}`;
+  };
+
+  const handleSizeSelection = (event) => {
+    setSelectedSize(event.target.value);
+  };
+
+  const handleDateSelection = (event) => {
+    setSelectedDate(event.target.value);
+  };
+
+  const handleLocationInput = (event) => {
+    setLocation(event.target.value);
+  };
+
+  const handleAlternateNumberInput = (event) => {
+    setAlternateNumber(event.target.value);
+  };
+
+  return (
+    <>
+      <br />
+      <div className="products-container">
+        {filteredProducts.length === 0 && <p>No cakes to display</p>}
+        {filteredProducts.map((product) => (
+          <div className="product-card" key={product.ProductID}>
+            <div className="product-img">
+              <a href={product.ProductImg}>
+                <img src={product.ProductImg} alt={product.ProductALT} />
+              </a>
+            </div>
+            <div className="product-details">
+              <label
+                htmlFor={`cake-size-input-${product.ProductID}`}
+                className="product-name"
+              >
+                {product.ProductName}
+              </label>
+              <div className="whatsapp-query">
+                <p>Have query? ask with:</p>
+                <a href="https://api.whatsapp.com/send?phone=919205525290">
+                  <img src={require("../images/whatsapp.png")} alt="" />
+                </a>
+              </div>
+              <input
+                type="text"
+                id={`cake-size-input-${product.ProductID}`}
+                placeholder="Enter Size you want"
+                value={selectedSize}
+                onChange={handleSizeSelection}
+                className="cake-size-input"
+              />
+              <input
+                type="date"
+                placeholder="Select Date"
+                value={selectedDate}
+                onChange={handleDateSelection}
+                className="date-input"
+              />
+              <input
+                type="text"
+                placeholder="Enter Location with landmark"
+                value={location}
+                onChange={handleLocationInput}
+                className="location-input"
+              />
+              <input
+                type="number"
+                placeholder="Enter Alternate Number"
+                max={10}
+                value={alternateNumber}
+                onChange={handleAlternateNumberInput}
+                className="alternate-number-input"
+              />
+              <div className="whatsappLink">
+                <a
+                  href={createWhatsappMessage(
+                    product.ProductName,
+                    product.ProductImg
+                  )}
+                >
+                  <button className="Whatsapp-btn">Get the Price</button>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </>
+  );
+};
+
+export default ProductDetails;

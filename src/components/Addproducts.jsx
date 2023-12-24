@@ -73,7 +73,12 @@ const Addproducts = () => {
       <br />
       <h2>ADD PRODUCTS</h2>
       <hr />
-      <form autoComplete="off" className="form-group" onSubmit={addProduct}>
+      <form
+        id="product-form"
+        autoComplete="off"
+        className="form-group"
+        onSubmit={addProduct}
+      >
         <label htmlFor="product-name">Product Name</label>
         <br />
         <input
