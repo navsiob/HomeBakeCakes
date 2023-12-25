@@ -61,8 +61,8 @@ const App = () => {
           <Route path="/Valentines" element={<ValentinesDayCakes />} />
           <Route path="/Wedding" element={<WeddingCakes />} />
           <Route path="/Chocolates" element={<CustomizedChocolate />} />
-          <Route path="250g" element={<Size250g />} />
-          <Route path="500g" element={<Size500g />} />
+          <Route path="250-gram-cakes" element={<Size250g />} />
+          <Route path="500-gram-cakes" element={<Size500g />} />
           <Route path="1-KG-Cakes" element={<Size1kg />} />
           <Route path="1.5-KG-Cakes" element={<Size15kg />} />
           <Route path="2-KG-Cakes" element={<Size2kg />} />

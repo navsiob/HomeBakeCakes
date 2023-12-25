@@ -7,7 +7,7 @@ const Addproducts = () => {
   const [productCategory, setProductCategory] = useState("");
   const [productALT, setProductALT] = useState("");
   const [productSize, setProductSize] = useState("");
-
+  const [previewURL, setPreviewURL] = useState(null); // State to hold the preview URL
   const [error, setError] = useState("");
 
   const types = ["image/png", "image/jpeg"];
@@ -17,9 +17,14 @@ const Addproducts = () => {
     if (selectedFile && types.includes(selectedFile.type)) {
       setProductImg(selectedFile);
       setError("");
+
+      // Create a URL for the selected file and set it in the state for preview
+      const imageUrl = URL.createObjectURL(selectedFile);
+      setPreviewURL(imageUrl);
     } else {
       setProductImg(null);
-      setError("Plese select a image of type PNG or JPEG.");
+      setError("Please select an image of type PNG or JPEG.");
+      setPreviewURL(null); // Reset preview if error occurs
     }
   };
 
@@ -119,7 +124,6 @@ const Addproducts = () => {
           <option value="Wedding-Cakes">Wedding Cakes</option>
           <option value="customized-chocolate">Customized Chocolate</option>
         </select>
-
         <label htmlFor="product-ALT">Product ALT</label>
         <br />
         <input
@@ -130,7 +134,6 @@ const Addproducts = () => {
           onChange={(e) => setProductALT(e.target.value)}
           value={productALT}
         />
-
         <label htmlFor="product-size">Product Size </label>
         <select
           id="product-Size"
@@ -174,6 +177,7 @@ const Addproducts = () => {
           className="form-control"
           onChange={productImgHandler}
         />
+        {previewURL && <img src={previewURL} alt="Product Preview" />}{" "}
         <button id="file" className="btn btn-success  btn-nd mytbtn">
           Add File
         </button>

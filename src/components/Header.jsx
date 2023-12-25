@@ -60,6 +60,7 @@ const Header = () => {
       </div>
       {showSearchResults && (
         <section>
+          <br />
           <h1>Search Results: </h1>
           <Cake category={searchTerm} />
         </section>

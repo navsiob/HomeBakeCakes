@@ -63,6 +63,12 @@ select {
   background-color: #0056b3;
 }
 
+.container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
