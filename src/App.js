@@ -63,26 +63,26 @@ const App = () => {
           <Route path="/Chocolates" element={<CustomizedChocolate />} />
           <Route path="250g" element={<Size250g />} />
           <Route path="500g" element={<Size500g />} />
-          <Route path="1kg" element={<Size1kg />} />
-          <Route path="1.5kg" element={<Size15kg />} />
-          <Route path="2kg" element={<Size2kg />} />
-          <Route path="2.5kg" element={<Size25kg />} />
-          <Route path="3kg" element={<Size3kg />} />
-          <Route path="3.5kg" element={<Size35kg />} />
-          <Route path="4kg" element={<Size4kg />} />
-          <Route path="4.5kg" element={<Size45kg />} />
-          <Route path="5kg" element={<Size5kg />} />
-          <Route path="5.5kg" element={<Size55kg />} />
-          <Route path="6kg" element={<Size6kg />} />
-          <Route path="6.5kg" element={<Size65kg />} />
-          <Route path="7kg" element={<Size7kg />} />
-          <Route path="7.5kg" element={<Size75kg />} />
-          <Route path="8kg" element={<Size8kg />} />
-          <Route path="8.5kg" element={<Size85kg />} />
-          <Route path="9kg" element={<Size9kg />} />
-          <Route path="9.5kg" element={<Size95kg />} />
-          <Route path="10kg" element={<Size10kg />} />
-          <Route path="10.5kg" element={<Size105kg />} />
+          <Route path="1-KG-Cakes" element={<Size1kg />} />
+          <Route path="1.5-KG-Cakes" element={<Size15kg />} />
+          <Route path="2-KG-Cakes" element={<Size2kg />} />
+          <Route path="2.5-KG-Cakes" element={<Size25kg />} />
+          <Route path="3-KG-Cakes" element={<Size3kg />} />
+          <Route path="3.5-KG-Cakes" element={<Size35kg />} />
+          <Route path="4-KG-Cakes" element={<Size4kg />} />
+          <Route path="4.5-KG-Cakes" element={<Size45kg />} />
+          <Route path="5-KG-Cakes" element={<Size5kg />} />
+          <Route path="5.5-KG-Cakes" element={<Size55kg />} />
+          <Route path="6-KG-Cakes" element={<Size6kg />} />
+          <Route path="6.5-KG-Cakes" element={<Size65kg />} />
+          <Route path="7-KG-Cakes" element={<Size7kg />} />
+          <Route path="7.5-KG-Cakes" element={<Size75kg />} />
+          <Route path="8-KG-Cakes" element={<Size8kg />} />
+          <Route path="8.5-KG-Cakes" element={<Size85kg />} />
+          <Route path="9-KG-Cakes" element={<Size9kg />} />
+          <Route path="9.5-KG-Cakes" element={<Size95kg />} />
+          <Route path="10-KG-Cakes" element={<Size10kg />} />
+          <Route path="10.5-KG-Cakes" element={<Size105kg />} />
         </Routes>
       </BrowserRouter>
     </ProductsContextProvider>

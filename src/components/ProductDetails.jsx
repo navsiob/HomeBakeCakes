@@ -45,33 +45,31 @@ const ProductDetails = ({ category }) => {
   };
 
   return (
-    <>
-      <br />
+    <section>
       <div className="products-container">
-        {filteredProducts.length === 0 && <p>No cakes to display</p>}
+        {filteredProducts.length === 0 && (
+          <p>No cakes to display, try different search.</p>
+        )}
         {filteredProducts.map((product) => (
-          <div className="product-card" key={product.ProductID}>
+          <article className="product-card" key={product.ProductID}>
             <div className="product-img">
               <a href={product.ProductImg}>
                 <img src={product.ProductImg} alt={product.ProductALT} />
               </a>
             </div>
             <div className="product-details">
-              <label
-                htmlFor={`cake-size-input-${product.ProductID}`}
-                className="product-name"
-              >
-                {product.ProductName}
-              </label>
+              <h3 className="product-name">{product.ProductName}</h3>
               <div className="whatsapp-query">
                 <p>Have query? ask with:</p>
-                <a href="https://api.whatsapp.com/send?phone=919205525290">
+                <a
+                  target="_blank"
+                  href="https://api.whatsapp.com/send?phone=919205525290"
+                >
                   <img src={require("../images/whatsapp.png")} alt="" />
                 </a>
               </div>
               <input
                 type="text"
-                id={`cake-size-input-${product.ProductID}`}
                 placeholder="Enter Size you want"
                 value={selectedSize}
                 onChange={handleSizeSelection}
@@ -101,6 +99,7 @@ const ProductDetails = ({ category }) => {
               />
               <div className="whatsappLink">
                 <a
+                  target="_blank"
                   href={createWhatsappMessage(
                     product.ProductName,
                     product.ProductImg
@@ -110,10 +109,10 @@ const ProductDetails = ({ category }) => {
                 </a>
               </div>
             </div>
-          </div>
+          </article>
         ))}
       </div>
-    </>
+    </section>
   );
 };
 
