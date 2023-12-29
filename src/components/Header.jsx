@@ -17,9 +17,11 @@ const Header = () => {
   return (
     <div id="header">
       <div id="heading">
+        <hr />
         <Link to="/">
           <h1>HOME BAKE CAKES</h1>
         </Link>
+        <hr />
         <p>{products.length}+ Cakes Designs (still counting)</p>
       </div>
 
@@ -36,7 +38,7 @@ const Header = () => {
                 alt="Facebook"
               />
             </a>
-            <a target="_blank" href="https://instagram.com">
+            <a target="_blank" href="https://instagram.com/homebake.cakes">
               <img
                 src={require("../images/instagram logo.avif")}
                 alt="Instagram"
