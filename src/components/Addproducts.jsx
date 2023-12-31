@@ -1,14 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { storage, db } from "../config/Config";
+import { ProductsContext } from "../global/ProductsContext";
 
 const Addproducts = () => {
+  const { products } = useContext(ProductsContext);
+
   const [productName, setProductName] = useState("");
   const [productImg, setProductImg] = useState(null);
   const [productCategory, setProductCategory] = useState("");
   const [productALT, setProductALT] = useState("");
   const [productSize, setProductSize] = useState("");
-  const [previewURL, setPreviewURL] = useState(null); // State to hold the preview URL
+  const [previewURL, setPreviewURL] = useState(null);
   const [error, setError] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [showSearchResults, setShowSearchResults] = useState(false);
+  const [progress, setProgress] = useState(0);
+  const [message, setMessage] = useState("");
 
   const types = ["image/png", "image/jpeg"];
 
@@ -17,14 +24,12 @@ const Addproducts = () => {
     if (selectedFile && types.includes(selectedFile.type)) {
       setProductImg(selectedFile);
       setError("");
-
-      // Create a URL for the selected file and set it in the state for preview
       const imageUrl = URL.createObjectURL(selectedFile);
       setPreviewURL(imageUrl);
     } else {
       setProductImg(null);
       setError("Please select an image of type PNG or JPEG.");
-      setPreviewURL(null); // Reset preview if error occurs
+      setPreviewURL(null);
     }
   };
 
@@ -38,13 +43,12 @@ const Addproducts = () => {
       (snapshot) => {
         const progress =
           (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-        console.log(progress);
+        setProgress(progress);
       },
       (err) => {
         setError(err.message);
       },
       () => {
-        // getting product url and if success then storing the product in db
         storage
           .ref("product-images")
           .child(productImg.name)
@@ -65,6 +69,9 @@ const Addproducts = () => {
                 setProductSize("");
                 setProductImg(null);
                 setError("");
+                setProgress(0); // Reset progress after upload
+                setPreviewURL(null);
+                setMessage("Product added successfully.");
                 document.getElementById("file").value = "";
               })
               .catch((err) => setError(err.message));
@@ -72,6 +79,18 @@ const Addproducts = () => {
       }
     );
   };
+  const deleteDocument = async (docIdToDelete) => {
+    try {
+      await db.collection("Products").doc(docIdToDelete).delete();
+      setMessage("Cake deleted successfully."); // Set deletion success message
+    } catch (error) {
+      setError(`Error deleting document: ${error.message}`);
+    }
+  };
+
+  const filteredProducts = products.filter((product) =>
+    product.ProductName.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="container">
@@ -183,6 +202,42 @@ const Addproducts = () => {
         </button>
       </form>
       {error && <span>{error}</span>}
+      <p>Progress: {progress}%</p>
+      {message && <span>{message}</span>}
+
+      <div id="search">
+        <form>
+          <input
+            type="search"
+            name="search"
+            id="search-input"
+            placeholder="Search cakes..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
+        </form>
+      </div>
+      {showSearchResults ? (
+        <section>
+          <br />
+          <h1>Search Results: </h1>
+        </section>
+      ) : (
+        filteredProducts.map((product) => (
+          <div>
+            <img
+              style={{ width: "200px", height: "200px" }}
+              src={product.ProductImg}
+              alt=""
+            />
+            <p>Name: {product.ProductName}</p>
+            <p>ALT: {product.ProductALT}</p>
+            <button onClick={() => deleteDocument(product.ProductID)}>
+              Delete
+            </button>
+          </div>
+        ))
+      )}
     </div>
   );
 };
