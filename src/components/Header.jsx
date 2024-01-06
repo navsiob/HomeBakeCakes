@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { ProductsContext } from "../global/ProductsContext";
 import Cake from "./ProductDetails";
-import { Outlet, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { products } = useContext(ProductsContext);
@@ -32,13 +32,21 @@ const Header = () => {
           </li>
           <li>
             <p>Follow us:</p>
-            <a target="_blank" href="https://facebook.com">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://facebook.com"
+            >
               <img
                 src={require("../images/Facebook_Logo_2023.png")}
                 alt="Facebook"
               />
             </a>
-            <a target="_blank" href="https://instagram.com/homebake.cakes">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://instagram.com/homebake.cakes"
+            >
               <img
                 src={require("../images/instagram logo.avif")}
                 alt="Instagram"

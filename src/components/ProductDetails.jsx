@@ -25,19 +25,26 @@ const ProductDetails = ({ category }) => {
 
     return `https://api.whatsapp.com/send?phone=919205525290&text=${encodeURIComponent(
       message
-    )}%0A${encodeURIComponent(productImg)}`;
+    )}%0A image link:${encodeURIComponent(productImg)}`;
   };
 
   const handleSizeSelection = (event) => {
-    setSelectedSize(event.target.value);
+    if (event.target.value !== "") {
+      setSelectedSize(event.target.value);
+    } else {
+      setSelectedSize("not sure");
+    }
   };
 
   const handleDateSelection = (event) => {
     setSelectedDate(event.target.value);
   };
-
   const handleLocationInput = (event) => {
-    setLocation(event.target.value);
+    if (event.target.value !== "") {
+      setLocation(event.target.value);
+    } else {
+      setLocation("Delhi");
+    }
   };
 
   const handleAlternateNumberInput = (event) => {
@@ -53,7 +60,11 @@ const ProductDetails = ({ category }) => {
         {filteredProducts.map((product) => (
           <article className="product-card" key={product.ProductID}>
             <div className="product-img">
-              <a href={product.ProductImg}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={product.ProductImg}
+              >
                 <img src={product.ProductImg} alt={product.ProductALT} />
               </a>
             </div>
@@ -63,6 +74,7 @@ const ProductDetails = ({ category }) => {
                 <p>Have query? ask with:</p>
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href="https://api.whatsapp.com/send?phone=919205525290"
                 >
                   <img src={require("../images/whatsapp.png")} alt="" />
@@ -100,6 +112,7 @@ const ProductDetails = ({ category }) => {
               <div className="whatsappLink">
                 <a
                   target="_blank"
+                  rel="noopener noreferrer"
                   href={createWhatsappMessage(
                     product.ProductName,
                     product.ProductImg

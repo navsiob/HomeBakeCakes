@@ -33,6 +33,11 @@ const Addproducts = () => {
     }
   };
 
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setShowSearchResults(true);
+  };
+
   const addProduct = (e) => {
     e.preventDefault();
     const uploadTask = storage
@@ -206,7 +211,7 @@ const Addproducts = () => {
       {message && <span>{message}</span>}
 
       <div id="search">
-        <form>
+        <form onSubmit={handleSearch}>
           <input
             type="search"
             name="search"
@@ -217,12 +222,7 @@ const Addproducts = () => {
           />
         </form>
       </div>
-      {showSearchResults ? (
-        <section>
-          <br />
-          <h1>Search Results: </h1>
-        </section>
-      ) : (
+      {showSearchResults &&
         filteredProducts.map((product) => (
           <div>
             <img
@@ -236,8 +236,7 @@ const Addproducts = () => {
               Delete
             </button>
           </div>
-        ))
-      )}
+        ))}
     </div>
   );
 };
