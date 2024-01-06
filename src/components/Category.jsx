@@ -1,9 +1,11 @@
 import React from "react";
 import { Outlet, Link } from "react-router-dom";
+import Header from "./Header";
 
 const Catigory = () => {
   return (
     <main>
+      <Header />
       <div id="introduction">
         <h1>Online Cake Delivery In Delhi</h1>
         <p>
