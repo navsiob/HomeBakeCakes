@@ -102,9 +102,9 @@ const ProductDetails = ({ category }) => {
                 className="location-input"
               />
               <input
-                type="number"
+                type="tel"
                 placeholder="Enter Alternate Number"
-                max={10}
+                maxlength={10}
                 value={alternateNumber}
                 onChange={handleAlternateNumberInput}
                 className="alternate-number-input"
