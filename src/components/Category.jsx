@@ -146,70 +146,70 @@ const Catigory = () => {
         <h2>Choose Your Preferred Cake Size</h2>
         <ul>
           <li>
-            <Link to="250-gram-cakes">250G-cakes</Link>
+            <Link to="250-gram-cakes">250g</Link>
           </li>
           <li>
-            <Link to="500-gram-cakes">500G-cakes</Link>
+            <Link to="500-gram-cakes">500g</Link>
           </li>
           <li>
-            <Link to="1-KG-Cakes">1KG-cakes</Link>
+            <Link to="1-KG-Cakes">1Kg</Link>
           </li>
           <li>
-            <Link to="1.5-KG-Cakes">1.5KG-cakes</Link>
+            <Link to="1.5-KG-Cakes">1.5Kg</Link>
           </li>
           <li>
-            <Link to="2-KG-Cakes">2KG-cakes</Link>
+            <Link to="2-KG-Cakes">2Kg</Link>
           </li>
           <li>
-            <Link to="2.5-KG-Cakes">2.5KG-cakes</Link>
+            <Link to="2.5-KG-Cakes">2.5Kg</Link>
           </li>
           <li>
-            <Link to="3-KG-Cakes">3KG-cakes</Link>
+            <Link to="3-KG-Cakes">3Kg</Link>
           </li>
           <li>
-            <Link to="3.5-KG-Cakes">3.5KG-cakes</Link>
+            <Link to="3.5-KG-Cakes">3.5Kg</Link>
           </li>
           <li>
-            <Link to="4-KG-Cakes">4KG-cakes</Link>
+            <Link to="4-KG-Cakes">4Kg</Link>
           </li>
           <li>
-            <Link to="4.5-KG-Cakes">4.5KG-cakes</Link>
+            <Link to="4.5-KG-Cakes">4.5Kg</Link>
           </li>
           <li>
-            <Link to="5-KG-Cakes">5KG-cakes</Link>
+            <Link to="5-KG-Cakes">5Kg</Link>
           </li>
           <li>
-            <Link to="5.5-KG-Cakes">5.5KG-cakes</Link>
+            <Link to="5.5-KG-Cakes">5.5Kg</Link>
           </li>
           <li>
-            <Link to="6-KG-Cakes">6KG-cakes</Link>
+            <Link to="6-KG-Cakes">6Kg</Link>
           </li>
           <li>
-            <Link to="6.5-KG-Cakes">6.5KG-cakes</Link>
+            <Link to="6.5-KG-Cakes">6.5Kg</Link>
           </li>
           <li>
-            <Link to="7-KG-Cakes">7KG-cakes</Link>
+            <Link to="7-KG-Cakes">7Kg</Link>
           </li>
           <li>
-            <Link to="7.5-KG-Cakes">7.5KG-cakes</Link>
+            <Link to="7.5-KG-Cakes">7.5Kg</Link>
           </li>
           <li>
-            <Link to="8-KG-Cakes">8KG-cakes</Link>
+            <Link to="8-KG-Cakes">8Kg</Link>
           </li>
           <li>
-            <Link to="8.5-KG-Cakes">8.5KG-cakes</Link>
+            <Link to="8.5-KG-Cakes">8.5Kg</Link>
           </li>
           <li>
-            <Link to="9-KG-Cakes">9KG-cakes</Link>
+            <Link to="9-KG-Cakes">9Kg</Link>
           </li>
           <li>
-            <Link to="9.5-KG-Cakes">9.5KG-cakes</Link>
+            <Link to="9.5-KG-Cakes">9.5Kg</Link>
           </li>
           <li>
-            <Link to="10-KG-Cakes">10KG-cakes</Link>
+            <Link to="10-KG-Cakes">10Kg</Link>
           </li>
           <li>
-            <Link to="10.5-KG-Cakes">10.5KG-cakes</Link>
+            <Link to="10.5-KG-Cakes">10.5Kg</Link>
           </li>
         </ul>
       </div>
