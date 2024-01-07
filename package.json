@@ -7,8 +7,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^10.6.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.19.0",
     "react-scripts": "5.0.1",
@@ -40,5 +40,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "for production: running on the build command: npm i npm run build serve -s build https://localhost:8443 or https://127.0.0.1:8443",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "HomeBakeCakes"
+  },
+  "author": "",
+  "license": "ISC"
 }
