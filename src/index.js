@@ -1,6 +1,7 @@
 import React from "react";
 import reportWebVitals from "./reportWebVitals";
 import { hydrate, render } from "react-dom";
+import ReactDOM from "react-dom";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./index.css";
@@ -94,11 +95,13 @@ const App = (
   </div>
 );
 
+ReactDOM.render(App, document.getElementById("root"));
 const rootElement = document.getElementById("root");
+
 if (rootElement.hasChildNodes()) {
-  hydrate(App, rootElement);
+  ReactDOM.hydrate(App, rootElement);
 } else {
-  render(App, rootElement);
+  ReactDOM.render(App, rootElement);
 }
 
 // If you want to start measuring performance in your app, pass a function
