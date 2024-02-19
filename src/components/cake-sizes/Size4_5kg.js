@@ -3,7 +3,7 @@ import Cake from "../ProductDetails";
 import Header from "../Header";
 import { Helmet } from "react-helmet";
 
-const Sized4_5kg = () => {
+const Size4_5kg = () => {
   return (
     <div>
       <Helmet>
@@ -11,10 +11,10 @@ const Sized4_5kg = () => {
         <meta name="description" content="Explore freshly baked 4.5 Kg cakes" />
       </Helmet>
       <Header />
-      <h1>d4.5 KG Cakes</h1>
-      <Cake category="d4.5kg" />;
+      <h1>4.5 KG Cakes</h1>
+      <Cake category="4.5kg" />;
     </div>
   );
 };
 
-export default Sized4_5kg;
+export default Size4_5kg;
