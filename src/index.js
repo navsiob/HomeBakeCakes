@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./index.css";
 import Catigory from "./components/Category";
 import Addproducts from "./components/Addproducts";
+import NotFound from "./components/NotFound";
 import { ProductsContextProvider } from "./global/ProductsContext";
 //cake category
 import BirthdayCakes from "./components/cake-category/BirthdayCake";
@@ -51,6 +52,7 @@ root.render(
       <BrowserRouter>
         <Routes>
           <Route index element={<Catigory />} />
+          <Route path="*" element={<NotFound />} />
           <Route path="Catigory" element={<Catigory />} />
           <Route path="addproducts" element={<Addproducts />} />
           <Route path="Birthday" element={<BirthdayCakes />} />

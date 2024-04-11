@@ -35,7 +35,7 @@ const Header = () => {
             <a
               target="_blank"
               rel="noopener noreferrer"
-              href="https://facebook.com"
+              href="https://www.facebook.com/profile.php?id=61558006164530"
             >
               <img
                 src={require("../images/Facebook_Logo_2023.png")}

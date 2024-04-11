@@ -8,6 +8,7 @@ li {
   margin: 0;
   padding: 0;
 }
+
 /* add product */
 .container {
   max-width: 600px;
@@ -88,6 +89,7 @@ body {
   text-decoration: none;
   color: #333;
 }
+
 #contact {
   display: flex;
   justify-content: center;
@@ -128,7 +130,7 @@ body {
 #search-input {
   width: 90vw;
   padding: 8px;
-  margin-top: 10px;
+  margin: 10px 0px;
   border: 1px solid #ccc;
   border-radius: 5px;
 }
@@ -155,9 +157,10 @@ main {
 
 /* Introduction section */
 #introduction h1 {
-  margin-bottom: 20px;
+  margin-top: 10px;
   font-size: 2em;
 }
+
 #introduction p {
   margin-bottom: 20px;
 }
@@ -170,28 +173,35 @@ main {
   margin-bottom: 40px;
   margin: 2px;
 }
+
 #category h2 a {
   text-decoration-line: underline;
 }
+
 #category a {
   color: #333;
   text-decoration: none;
 }
+
 #category link {
   text-align: center;
   display: block;
 }
+
 #category img {
   margin: 2px;
   max-width: 100%;
   height: auto;
+  border-radius: 5px;
 }
+
 #category h3 {
   text-decoration: none;
   color: #333;
   margin-top: 10px;
   font-size: 1.1em;
 }
+
 /* Style the why-us section */
 #why-us {
   text-align: center;
@@ -204,6 +214,7 @@ main {
   font-size: 2.5em;
   margin-bottom: 20px;
 }
+
 #why-us p {
   display: inline;
 }
@@ -213,8 +224,10 @@ main {
   max-width: 100%;
   height: auto;
   margin-bottom: 10px;
-  border-radius: 8px; /* Add rounded corners */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  border-radius: 8px;
+  /* Add rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Add a subtle shadow */
 }
 
 /* Cake Size section */
@@ -273,7 +286,7 @@ main {
 
 .product-img img {
   max-width: 100%;
-  height: auto;
+  height: 500px;
   border-radius: 5px;
 }
 
